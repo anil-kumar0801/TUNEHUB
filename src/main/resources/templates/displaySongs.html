@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Songs</title>
+<link rel="stylesheet" th:href="@{/css/allSongs.css}">
+<style type="text/css">
+iframe{
+height:100px;
+width:400px;
+}
+</style>
+</head>
+<body>
+<div class="nav">
+        <a href="adminHome" class="start">Back</a>
+    </div>
+    <div class="songs-container">
+        <div class="tables">
+        <table>
+            <thead>
+            <tr>
+                <th class="col">Name</th>
+                <th class="col">Artist</th>
+                <th class="col">Genre</th>
+                <th class="col">Play</th>
+            </tr>
+        </thead>
+
+		<tbody>
+            <tr th:each="song:${songs}">
+            <td th:text="${song.name}"></td>
+            <td th:text="${song.artist}"></td>
+            <td th:text="${song.genre}"></td>
+            <td>
+            <audio controls>
+            <source th:src="${song.link}" type="audio/mpeg">
+            </audio>
+            </td>
+            </tr>
+        </tbody>
+</table>
+
+</body>
+</html>

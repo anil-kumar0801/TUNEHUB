@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CustomerHome</title>
+<link rel="stylesheet" th:href="@{/css/customerHome.css}">
+</head>
+<body>
+<div th:unless="${isPremium}" class="non-premium">
+	<div class="container">
+	<div class="menu">
+	<form action="logout" method="get">
+	<button type="submit">Logout</button>
+	</form>
+	</div>
+	<div class="content">
+		<p>"Unlock the symphony of your soul with premium access to our music app's exclusive library."</p>
+	</div>
+	<a href="pay">Get Premium</a>
+	</div>
+</div>
+	
+	<div th:if="${isPremium}" class="premium">
+	<nav class="navbar">
+    <div class="menus">
+        <a href="createPlaylists">Create Playlist<span></span></a>
+        <a href="viewPlaylists">View Playlists<span></span></a>
+    </div>
+</nav>
+ 	<div class="songs-container">
+        <div class="tables">
+        <table>
+            <thead>
+            <tr>
+                <th class="col">Name</th>
+                <th class="col">Artist</th>
+                <th class="col">Genre</th>
+                <th class="col">Play</th>
+            </tr>
+        </thead>
+
+		<tbody>
+            <tr th:each="song:${songs}">
+            <td th:text="${song.name}"></td>
+            <td th:text="${song.artist}"></td>
+            <td th:text="${song.genre}"></td>
+            <td>
+            <audio controls>
+            <source th:src="${song.link}" type="audio/mpeg">
+            </audio>
+            </td>
+            </tr>
+</tbody>
+</table>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
