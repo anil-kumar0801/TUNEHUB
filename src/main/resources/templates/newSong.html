@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Songs</title>
+<link rel="stylesheet" th:href="@{/css/newSongs.css}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="addSong" method="post">
+            <h2>Welcome Admin!</h2>
+            <div class="input-field">
+                <i class="fa fa-music"></i>
+                <input type="text" name="name" placeholder="Song Name" required/>
+            </div>
+            <div class="input-field">
+                <i class="fa fa-user"></i>
+                <input type="text" name="artist" placeholder="Song Artist" required/>
+            </div>
+
+            <div class="input-field">
+                <i class="fa fa-film"></i>
+                <input type="text" name="genre" placeholder="Song Genre" required/>
+            </div>
+
+            <div class="input-field">
+                <i class="fa fa-link"></i>
+                <input type="text" name="link" placeholder="Song Link" required/>
+            </div>
+
+        <button type="submit" value="ADD SONG">ADD SONG</button>
+        </form>
+        </div>
+</body>
+</html>

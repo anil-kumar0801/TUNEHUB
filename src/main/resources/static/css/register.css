@@ -1,0 +1,128 @@
+@charset "ISO-8859-1";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/images/music11.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+h2 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    flex-direction:column;
+	backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background:rgba(236, 234, 234, 0.05);
+	border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-field {
+    position: relative;
+    width: 310px;
+    display: flex;
+    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+.input-field i{
+    color:#333;
+    height: 30px;
+    width: 30px;
+    padding-top: 10px;
+    border: 1px solid #cccccc;
+    border-right: none;
+    text-align: center;
+}
+.input-field input:hover{
+    background: #fafafa;
+}
+.input-field input[type=text],
+.input-field input[type=email],
+.input-field input[type=password]{
+    width: 100%;
+    padding: 8px 10px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+}
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus{
+    box-shadow: 0 0 2px 1px rgba(255,169,0,0.5);
+    border: 1px solid #f5baf5;
+    background: #fafafa;
+}
+.address{
+    height: 50px;;
+}
+.select-option{
+    position: relative;
+    width: 100%;
+}
+.select-option select{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    padding: 0px 15px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #cccccc;
+    background: none;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background:#f5961a;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #191919;
+    font-weight: bold;
+    transition: .5s ease;
+}
+.btn:hover{
+    background-color: rgb(41, 172, 41);
+    color:white;
+}
+.sign-link {
+    color: #fff;
+    font-size: .9em;
+    text-align: center;
+    margin: 25px 0 10px;
+    transition: .5s ease;
+}
+.sign-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .5s ease;
+}
+
+.sign-link p a:hover {
+    text-decoration: underline;
+}
